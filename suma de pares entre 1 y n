@@ -1,0 +1,20 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+int main(){
+int num,suma=0,k;
+cout<<"ingrese la cantidad de numero que desea sumar";
+cin>>num;
+for(k=2;k<=num;k=k+2 ){
+	suma=suma+k;
+	cout<<k<<endl;
+}
+cout<<"la suma de lo numeros es : "<<suma;
+
+getch();
+return 0;
+}
