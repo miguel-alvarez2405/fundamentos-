@@ -1,0 +1,83 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+int main(){
+	int dia,mes,año;
+	cout<<"[ ENERO , MARZO, MAYO,JULIO,AGOSTO,OCTUBRE Y DICIEMBRE : TIENE 31 DIAS ]"<<endl;
+	cout<<"[ ABRIL,JUNIO,SEPTIEMBRE,NOVIEMBRE : TIENE 30 DIAS ]"<<endl;
+	cout<<"[ FEBRERO : TIENE 29 DIAS ]"<<endl;
+	cout<<"---------------------------------------------------------------------------"<<endl;
+	cout<<"ingrese el dia"<<endl;
+	cin>>dia;
+	cout<<"ingrese el mes"<<endl;
+	cin>>mes;
+	cout<<"ingrese el año"<<endl;
+	cin>>año;
+
+    if(mes>0 && mes<13)
+	{
+		
+		if(mes==1 || mes==2){
+		cout<<"verano";
+		}
+	
+	    if(mes==4 || mes==5 ){
+	    cout<<"otoño";
+	    }
+
+		if(mes==7 || mes==8){
+		cout<<"es invierno";
+		}
+		if(mes==10 || mes==11){
+		cout<<"es primavera";
+		}
+		    if(mes==3){
+				cout<<"el mes es marzo";
+		      if(dia<0 && dia<21){
+				  
+			}
+			  else {
+			cout<<"es invierno";
+			}
+			}
+			if(mes==6){
+				if(dia<0 && dia<21){
+				cout<<"es otoño";
+				}
+				else {
+				cout<<"es invierno";
+				}
+			}
+			if(mes==9){
+				if(dia<0 && dia<21){
+				cout<<"es invierno";
+				}
+				else {
+				cout<<"es primavera";
+				}
+			}
+
+			if(mes==12){
+				if(dia<0 && dia<21){
+				cout<<"es primavera";
+				}
+				else {
+				cout<<"es verano";
+				}
+			}
+	
+	}
+	else {
+	cout<<"error, no existe el mes";
+	}
+
+
+
+getch();
+return 0;
+
+}
