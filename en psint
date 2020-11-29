@@ -1,0 +1,11 @@
+Definir r,x Como Entero;
+	Escribir "Ingresar el valor de x: ";
+	Leer x;
+	si (x>=0) entonces 
+		r<-x;
+	siNo
+		r<--x;
+	Fin si;
+	Escribir "El valor absoluto es: ", r;
+		
+FinProceso
