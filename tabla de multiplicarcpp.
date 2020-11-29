@@ -1,0 +1,24 @@
+//tabla de multiplicacion
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+int main(){
+int suma=0,num,tabla,i;
+cout<<"calcule la tabla de multiplicacion de cualquier valor ";
+cin>>num;
+for(i=1;i<10;i++){
+	tabla=num;
+	tabla=tabla*i;
+	cout<<num<<"x"<<i<<"="<<tabla<<endl;;
+
+	
+}
+
+
+getch();
+return 0;
+}
