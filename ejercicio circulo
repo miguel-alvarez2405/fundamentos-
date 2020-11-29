@@ -1,0 +1,25 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+int main()
+{
+    float diametro, area, perimetro, radio;
+    double pi=3.1416, volumen;
+    cout<< "Ingrese el diametro de la esfera: ";
+    cin>> diametro;
+    radio=diametro/2;
+    cout<< "El radio es igual a: " <<radio<<endl;
+    area= (4*pi)*pow(radio,2);
+    cout<< "El area de la esfera es: " <<area<<endl;
+    volumen= (4/3.0)*pi*pow(radio,3);
+    cout<< "El volumen de la esfera es: "<<volumen<<endl;
+	perimetro= 2*pi*radio;
+	cout<<"El perimetro de la esfera es de : "<<perimetro<<endl;
+    
+	getch();
+    return 0;
+}
