@@ -1,0 +1,34 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+int summa(int, float);
+
+
+int main(){
+	int x,n,s;
+	cout<<"ingrese el valor de n"<<endl;
+	cin>>n;
+	cout<<"ingrese el valor de X"<<endl;
+	cin>>x;
+	
+	s =summa(n,x);
+	cout<< "la suma de la serieses igual a : "<<s;
+	getch();
+return 0;
+}
+
+int summa(int n, float x){
+	int k,fac=1,suma=0,xx;
+	for(k=1;k<=n;k++){
+	fac=fac*k;
+	xx= pow(x,k);
+	suma=suma+(xx/fac);
+
+	}
+
+	return suma;
+}
