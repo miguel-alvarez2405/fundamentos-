@@ -1,0 +1,54 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+#include <string.h>
+#define MAX 20
+
+using namespace std;
+void cargar(int vec[],int n);
+void mostrar(int vec[],int n);
+void burbuja(int vec[], int n);
+
+void main(){
+int n,vec[MAX];
+  do{
+  cout<<"ingrese el valor de n: "<<endl;
+  cin>>n;
+  }while(n>MAX || n<0);
+  cargar(vec,n);
+  mostrar(vec,n);
+  cout<<"............................."<<endl;
+  burbuja(vec,n);
+  mostrar(vec,n);
+	
+getch();
+}
+
+void cargar(int vec[],int n){
+	for(int k=0;k<n;k++){
+	cout<<k+1<<" ingrese el vector"<<endl;
+	cin>>vec[k];
+	}
+}
+
+void mostrar(int vec[],int n){
+	for(int i=0; i<n;i++){
+	cout<<"vector ["<<i<<"] :"<<vec[i]<<endl;
+	
+	}
+
+}
+
+void burbuja(int vec[], int n){
+	int aux;
+	for(int k=0;k<n-1; k++){
+		for(int j=k+1; j<n; j++){
+			if(vec[k]>vec[j]){
+			aux=vec[k];
+			vec[k]=vec[j];
+			vec[j]= aux;
+			}
+		}
+	}
+}
