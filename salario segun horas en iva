@@ -1,0 +1,34 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+int main() {
+	int Numregistro,horas,saldo,salario;
+	double descuento;
+
+	cout<<"CABE RECORDAR QUE DEBE INSERTAR SU CODIGO DE TRABAJADOR Y NO SU NOMBRE"<<endl<<endl;
+	cout<<"ingrese su codigo de trabajador : "<<endl;
+	cin>>Numregistro;
+	cout<<"ingrese la cantidad de horas trabajadas al mes : "<<endl;
+	cin>> horas;
+	cout<< "Ingrese el salario por hora : ";
+	cin>>saldo;
+	salario=horas*saldo;
+	descuento=8272;
+	if(salario>=descuento){
+	salario=salario*0.87;
+	cout<<"SU SALARIO ES DE : "<<salario;
+
+	}
+	else {
+	cout<<"SU SALARIO ES DE : "<<salario;
+	}
+
+
+
+		getch();
+return 0;
+}
