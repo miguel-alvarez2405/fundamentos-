@@ -1,0 +1,36 @@
+#include "stdafx.h"
+#include "iostream" 
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+int suma(int);
+
+int main(){
+	int n,s;
+	cout<<"ingrese el valor de N"<<endl;
+	cin>>n;
+	s=suma(n);
+	cout<<"la simatoria de los numeros va ha ser igual a: "<<s<<endl;
+
+	getch();
+return 0;
+}
+
+int suma(int n ){
+int k,sumas=0,summa=0,sum;
+for(k=1;k<=n;k++){
+	if(k%2==0){
+		sumas=sumas-k;
+	
+	}else{
+	      summa=summa+k;
+	     }
+
+}
+sum=sumas+summa;
+
+return sum;
+
+}
