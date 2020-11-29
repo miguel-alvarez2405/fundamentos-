@@ -1,0 +1,26 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+int main() {
+int años,capital;
+float c,interes;
+
+cout<<"ingrese el capital inicial : " ;
+cin>>capital;
+
+cout<<"ingrese la cantidad de años : ";
+cin>> años;
+
+cout<<"ingrese la tasa de interes anual : ";
+cin>> interes;
+
+//c'=ckt
+c=capital*interes*años;
+cout<<"el capital ganado será : "<<c ; 
+		getch();
+return 0;
+}
