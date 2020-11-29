@@ -1,0 +1,41 @@
+#include "stdafx.h"
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+int main() {
+	float a,b,c,d,e,f;
+	double x,y;
+		cout<<"ingrese el valor de A :"<<endl;
+	    cin>>a;
+		cout<<"ingrese el valor de B :"<<endl;
+	    cin>>b;
+		cout<<"ingrese el valor de C :"<<endl;
+	    cin>>c;
+		
+		cout<<"ingrese el valor de D :"<<endl;
+	    cin>>d;
+		cout<<"ingrese el valor de E :"<<endl;
+	    cin>>e;
+		cout<<"ingrese el valor de F :"<<endl;
+	    cin>>f;
+		
+		// Ax+By=c
+		// Dx+Ey=F
+		// DESPEJAR X E IGUALARLAS
+
+		y=((a*f)-(c*d))/((a*e)-(d*b));
+		cout<<"Y = "<<y<<endl;
+		x=(c-(b*y))/a;
+		cout<<"X = "<<x<<endl;
+
+
+
+
+
+		getch();
+return 0;
+}
