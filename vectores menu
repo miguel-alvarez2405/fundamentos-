@@ -1,0 +1,92 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+#define MAX 100
+
+using namespace std;
+
+void cargar(int vec[],int n);
+void mostrar(int vec[],int n);
+void unir(int v1[],int n,int v2[],int m,int vec[],int &tam);
+void burbuja (int vec[],int m);
+
+void main(){
+	int tam,n,m, A[MAX],B[MAX],C[MAX];
+	int opc;
+	do{
+	cout<<"1) cargar"<<endl;
+	cout<<"2) mostrar"<<endl;
+	cout<<"3) concatenar  "<<endl;
+	cout<<"4) ordenar  "<<endl;
+	cout<<"5) Salir "<<endl;
+	cin>>opc;
+	switch(opc){
+	case 1: do {
+		    cout<<"Ingresar el tamaño del primer vector:" ;
+		    cin>>n;
+	        } while ((n<=0)||(n>MAX));
+	       cargar(A,n); // Cargar el primer vector
+	       do {
+		      cout<<"Ingresar el tamaño del segundo vector:" ;
+		      cin>>m;
+	          } while ((m<=0)||(m>MAX));
+	          
+	        break;
+	case 2: cargar(B,m); // Cargar el segundo vector
+		    break;
+	case 3: unir(A,n,B,m,C,tam); 
+		   break;
+	case 4: burbuja(C,tam); // Clasificados en orden ascendente
+	        mostrar(C,tam); // Muestro el vector C
+			break;
+	case 0: cout<<"Salir del menu";
+		    break;
+	default : cout<<"ERROR DE OPCION";
+		    break;
+}
+	getch();
+	system("cls");
+}while(opc!=0);
+
+
+getch();
+}
+void cargar(int vec[],int n)
+{
+	for (int i=0;i<n;i++)
+	{
+		cout<<"Vector["<<i<<"]= ";
+		cin>>vec[i];
+	}
+}
+
+void mostrar(int vec[],int n)
+{
+	for (int i=0;i<n;i++)
+		cout<<"Vector["<<i<<"]= "<<vec[i]<<endl;
+}
+
+void unir(int v1[],int n,int v2[],int m,int vec[],int &tam)
+{
+	for (int i=0;i<n;i++)  // Copio el primer vector v1
+		vec[i]=v1[i];
+	for (int i=0;i<m;i++) // Copio el segundo vector v2
+		vec[i+n]=v2[i];
+	tam=n+m;
+}
+
+void burbuja (int vec[],int m)
+{
+	int aux;
+	for (int i=0;i<m-1;i++)
+	{
+		for (int j=i+1;j<m;j++)
+			if (vec[i]>vec[j])
+			{
+				aux=vec[j];
+				vec[j]=vec[i];
+				vec[i]=aux;
+			}
+	}	
+}
